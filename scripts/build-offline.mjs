@@ -4,7 +4,9 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../dist/', import.meta.url));
-await copyFile(fileURLToPath(new URL('../LICENSE', import.meta.url)), path.join(root, 'LICENSE'));
+for (const name of ['LICENSE', 'NOTICE']) {
+  await copyFile(fileURLToPath(new URL('../' + name, import.meta.url)), path.join(root, name));
+}
 const files = ['index.html', 'manifest.webmanifest', 'r02/icons/icone-192.png', 'r02/icons/icone-512.png'];
 for (const file of (await readdir(path.join(root, 'assets'))).sort()) {
   if (/\.(?:js|css|otf|ttf|woff2?|svg|png|ico)$/.test(file)) files.push('assets/' + file);

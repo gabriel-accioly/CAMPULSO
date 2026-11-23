@@ -6,7 +6,7 @@ Prioridades de manutenção incluem acessibilidade, prevenção de perda de dado
 
 ## Próximas etapas
 
-1. Manter a distribuição web 0.2.1 e documentar o commit e o manifesto de cada versão liberada.
+1. Manter a distribuição web 1.0.0 e documentar o commit e o manifesto de cada versão liberada.
 2. Validar com estudantes depois do lançamento, conforme a decisão do responsável, com protocolo próprio de privacidade e participação voluntária.
 3. Avaliar portabilidade criptografada e recursos adicionais de aprendizagem e bem-estar depois da validação. O backup da versão atual é JSON legível.
 

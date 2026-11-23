@@ -22,7 +22,7 @@ import { availabilityForDate, dateInZone } from "../domain/planner.js";
 
 export const REVISION_KEY = "r02.revision";
 export const MAX_BACKUP_BYTES = 20 * 1024 * 1024;
-export const APP_VERSION = "0.2.1";
+export const APP_VERSION = "1.0.0";
 
 export type Command =
   | { type: "save-subject"; id?: string; name: string }

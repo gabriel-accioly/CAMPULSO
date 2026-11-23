@@ -1,8 +1,8 @@
 {
   "name": "campulso-integracao-react-dexie-001",
   "private": true,
-  "version": "0.2.1",
-  "description": "Candidata funcional isolada da Etapa 5 do CAMPULSO: R02 em React com persistencia local e planejamento explicavel.",
+  "version": "1.0.0",
+  "description": "Organização acadêmica e planejamento de estudos com persistência local e funcionamento offline.",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5177 --strictPort",

@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { chromium } from 'playwright';
 
-const root = path.resolve('dist');
+const root = path.resolve(process.env.CAMPULSO_TEST_DIST || 'dist');
 const evidence=process.env.CAMPULSO_EVIDENCE_DIR || 'proof';
 await mkdir(evidence,{recursive:true});
 const mime = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.png':'image/png', '.svg':'image/svg+xml', '.otf':'font/otf', '.webmanifest':'application/manifest+json'};
@@ -13,7 +13,7 @@ let networkOff = false;
 const server = createServer(async (req,res) => {
   if (networkOff) {req.socket.destroy(); return;}
   const url = new URL(req.url, 'http://localhost');
-  const dest = path.resolve(root, '.' + (url.pathname === '/' ? '/index.html' : decodeURIComponent(url.pathname)));
+  const dest = path.resolve(root, '.' + (decodeURIComponent(url.pathname) + (url.pathname.endsWith('/') ? 'index.html' : '')));
   if (!dest.startsWith(root + path.sep)) {res.writeHead(404).end(); return;}
   try {
     const body = await readFile(dest);

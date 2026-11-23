@@ -1,14 +1,14 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "version": 3,
+  "version": 4,
   "metadata": {
     "component": {
       "type": "application",
       "bom-ref": "campulso",
       "name": "CAMPULSO web",
-      "version": "0.2.1",
-      "description": "FINAL_COMPLETION_001. Apache-2.0 para o código próprio. Política de Privacidade 1.1."
+      "version": "1.0.0",
+      "description": "CAMPULSO 1.0.0. Edição base. Código próprio Apache-2.0. Política de Privacidade 1.1."
     },
     "lifecycles": [
       {
@@ -181,10 +181,22 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f2b6deca4c7101308a9d745557abb97d540c139fe59484f6c705b58aa72da068"
+          "content": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
         }
       ],
       "description": "Licença Apache 2.0"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:NOTICE",
+      "name": "NOTICE",
+      "description": "Atribuições do CAMPULSO e de terceiros",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d290f4740f699390e567a90934816063ccb897b40dff95f0a49c6536242a825c"
+        }
+      ]
     },
     {
       "type": "file",
@@ -193,7 +205,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "3263652b13b8997fa9ecb26b0039811594695f8c21a9a6be618bf97c1096b703"
+          "content": "2bb9cc5adf2202497b9dc63032bf023c134126fd48f99fde8f6edc79c197322f"
         }
       ],
       "description": "Avisos e condições"
@@ -205,7 +217,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "57e8fc7457b38367680824a1c719624a01ae5448a781c55193a669874be81155"
+          "content": "0a3c577a8f5523a3f04316b45094f48915b69c4b7e4cf4996f60a00f67261ce5"
         }
       ],
       "description": "Configuração do host"
@@ -307,18 +319,6 @@
     },
     {
       "type": "file",
-      "bom-ref": "file:assets/index-Dk0sRDxM.js",
-      "name": "assets/index-Dk0sRDxM.js",
-      "hashes": [
-        {
-          "alg": "SHA-256",
-          "content": "f1f385574c19651c5fd73a9deee1393de0db64489b995750996a4992f00fa53d"
-        }
-      ],
-      "description": "Bundle de JavaScript ou CSS"
-    },
-    {
-      "type": "file",
       "bom-ref": "file:assets/index-C7JHZQxM.css",
       "name": "assets/index-C7JHZQxM.css",
       "hashes": [
@@ -331,12 +331,24 @@
     },
     {
       "type": "file",
+      "bom-ref": "file:assets/index-CAS21VeR.js",
+      "name": "assets/index-CAS21VeR.js",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "54920e35d75af96b9ea369371b97d68336bccae77eb7bdc6a3624999d1328745"
+        }
+      ],
+      "description": "Bundle de JavaScript ou CSS"
+    },
+    {
+      "type": "file",
       "bom-ref": "file:index.html",
       "name": "index.html",
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "61c7ee4f8794b5795c1332400ffb340658cf72d7594560f36ae2e0a2e001c109"
+          "content": "d67390f9353151945f16517b791ba85d1b067926119a2876ffde33d4c47f5821"
         }
       ],
       "description": "Entrada"
@@ -398,7 +410,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f2655ab5605bd6b3706e4bca527a2636d0eace709bee0e5658a0521f40da9dd2"
+          "content": "c9f4216cb17ccf5292dd6eb534edf733e1c874c56368527420279275f646a87e"
         }
       ],
       "description": "Service worker"
@@ -410,7 +422,7 @@
       "hashes": [
         {
           "alg": "SHA-256",
-          "content": "f2655ab5605bd6b3706e4bca527a2636d0eace709bee0e5658a0521f40da9dd2"
+          "content": "c9f4216cb17ccf5292dd6eb534edf733e1c874c56368527420279275f646a87e"
         }
       ],
       "description": "Service worker"
@@ -442,7 +454,7 @@
       ]
     },
     {
-      "ref": "file:assets/index-Dk0sRDxM.js",
+      "ref": "file:assets/index-CAS21VeR.js",
       "dependsOn": [
         "lib:dexie",
         "lib:react",
@@ -465,6 +477,7 @@
       "dependsOn": [
         "file:404.html",
         "file:LICENSE",
+        "file:NOTICE",
         "file:THIRD_PARTY_NOTICES.txt",
         "file:_headers",
         "file:assets/Inter-Bold-BMUSwCc_.otf",
@@ -472,8 +485,8 @@
         "file:assets/Inter-Regular-7fSjz3xL.otf",
         "file:assets/Inter-SemiBold-CpcUY_gG.otf",
         "file:assets/Logo_compacto_sem_slogan-CT-L4rnd.svg",
-        "file:assets/index-Dk0sRDxM.js",
         "file:assets/index-C7JHZQxM.css",
+        "file:assets/index-CAS21VeR.js",
         "file:index.html",
         "file:manifest.webmanifest",
         "file:r02/icons/icone-192.png",

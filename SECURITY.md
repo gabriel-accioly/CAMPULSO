@@ -4,4 +4,4 @@ O escopo inclui integridade de backups JSON, IndexedDB, cache offline, dependên
 
 Comunique a falha diretamente a Gabriel Accioly pelo endereço de contato da [Política de Privacidade](PRIVACY.md). Informe versão, impacto e passos mínimos usando dados fictícios. Reserve os detalhes da falha para esse canal privado. Preserve em seu dispositivo os backups reais, as senhas e os registros acadêmicos.
 
-O mantenedor avalia gravidade e alcance, prepara correção, registra versões afetadas e orienta recuperação. A linha inicial em avaliação é 0.2.1. Prazos de resposta e suporte de longo prazo dependem da capacidade de manutenção.
+O mantenedor avalia gravidade e alcance, prepara correção, registra versões afetadas e orienta recuperação. A linha inicial em avaliação é 1.0.0. Prazos de resposta e suporte de longo prazo dependem da capacidade de manutenção.

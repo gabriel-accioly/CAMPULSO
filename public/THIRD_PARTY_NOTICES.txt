@@ -1,4 +1,4 @@
-CAMPULSO 0.2.1 — Avisos de terceiros distribuídos com a aplicação
+CAMPULSO 1.0.0 — Avisos de terceiros distribuídos com a aplicação
 
 Preserve este arquivo ao redistribuir o build ou seus componentes.
 

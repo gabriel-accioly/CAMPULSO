@@ -58,7 +58,7 @@ const sw=await readFile('dist/sw.js','utf8');
 assert.equal(sw,await readFile('dist/r02/sw.js','utf8'));
 const assets=JSON.parse(sw.match(/const ASSETS = (\[[^;]+\]);/)[1]);
 for(const a of assets)ref('sw.js',a);
-assert.deepEqual([...assets].sort(),files.filter(n=>!n.endsWith('sw.js')&&!['404.html','_headers','LICENSE','THIRD_PARTY_NOTICES.txt'].includes(n)).map(n=>n==='index.html'?'/':'/'+n).sort());
+assert.deepEqual([...assets].sort(),files.filter(n=>!n.endsWith('sw.js')&&!['404.html','_headers','LICENSE','NOTICE','THIRD_PARTY_NOTICES.txt'].includes(n)).map(n=>n==='index.html'?'/':'/'+n).sort());
 assert.ok(files.every(n=>!n.includes('diagnostic')&&!n.endsWith('.map')));
 const proof={html:htmls,refs,emittedModules:[...modules].length,moduleIDs:[...modules].map(id=>id.replace(path.resolve('.').replaceAll('\\','/'),'').replace(/^\u0000/,'')).sort(),privateEntryInBundle:false,assetSet:assets,identicalViteRebuild:true};
 const evidence=process.env.CAMPULSO_EVIDENCE_DIR || 'proof';

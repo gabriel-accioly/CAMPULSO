@@ -10,7 +10,7 @@ Gabriel Accioly, pessoa física, é o controlador das operações que define no 
 
 ## O que fica no seu dispositivo
 
-O uso do espaço pessoal dispensa cadastro. A versão 0.2.1 organiza os dados no IndexedDB, um banco local do seu perfil de navegador, vinculado ao endereço do site. O controlador não recebe automaticamente o conteúdo dessas onze coleções.
+O uso do espaço pessoal dispensa cadastro. O CAMPULSO organiza os dados no IndexedDB, um banco local do seu perfil de navegador, vinculado ao endereço do site. O controlador não recebe automaticamente o conteúdo dessas onze coleções.
 
 - Preferências (preferences). Idioma, fuso, modo de planejamento, limites de carga e configurações da semana.
 - Disciplinas (subjects). Nomes, identificadores, vínculo com período, cor e arquivamento.

@@ -1,4 +1,4 @@
-# Build e conferência da candidata 0.2.1
+# Build e conferência da versão 1.0.0
 
 A compilação de referência usou Windows x64, Node.js 24.18.0 e npm 11.16.0. Conserve os bytes do checkout, inclusive os finais de linha. O gerador do Service Worker inclui seu próprio conteúdo no identificador do cache. O lockfile fixa as versões e os digests dos pacotes npm.
 
@@ -15,13 +15,13 @@ node tests/public-references.mjs
 
 O comando de build chama TypeScript, Vite 6.4.6 e o gerador do shell offline. O verificador compara o conjunto completo de caminhos, o tipo de entrada e todos os SHA-256 com o manifesto de referência desta candidata. Um build divergente exige diagnóstico. Para conferir outra cópia, passe seu diretório como único argumento ao verificador. As referências do HTML, CSS, JS, manifesto e Service Worker também são testadas contra o build, com recompilação Vite em memória. A pasta `proof/` recebe a evidência local.
 
-A candidata contém 17 arquivos. O Vite produz um único bundle de JavaScript para a aplicação. As fontes, a marca, as licenças e os demais recursos servidos pertencem à mesma origem. O perfil de produção inclui `_headers` e uma página de erro 404. A hospedagem deve aceitar a raiz da origem como URL canônica. O Worker instalado usa onze recursos estáticos com integridade conferida. O índice HTML, os workers e o manifesto exigem revalidação. Os arquivos de nome versionado em `assets/` admitem cache público imutável.
+A edição base contém 18 arquivos. O Vite produz um único bundle de JavaScript para a aplicação. As fontes, a marca, as licenças e os demais recursos servidos pertencem à mesma origem. O perfil de produção inclui `_headers` e uma página de erro 404. A hospedagem deve aceitar a raiz da origem como URL canônica. O Worker instalado usa onze recursos estáticos com integridade conferida. O índice HTML, os workers e o manifesto exigem revalidação. Os arquivos de nome versionado em `assets/` admitem cache público imutável.
 
 Para um ensaio local de navegação, execute `npm run preview`. Para verificar o comportamento do Pages, use o emulador Wrangler 4.166.0 como ferramenta externa, somente em loopback. No terminal da raiz, sirva `dist/` com `wrangler pages dev dist --ip 127.0.0.1 --port 19473`. Em outro terminal da mesma pasta, execute `node tests/pages-release.mjs dist 19473 http-local.json`. A suíte lê apenas a origem local e grava o relatório no caminho fornecido.
 
 No Windows, com Microsoft Edge instalado, defina a variável de ambiente `CAMPULSO_BROWSER=msedge`. Execute `npm run test:functional`, `npm run test:offline` e `node tests/install-public.mjs` sequencialmente. O ensaio de atualização altera temporariamente o worker de `dist/` e restaura seu conteúdo ao sair. Execute-o em cópia descartável e confira novamente o manifesto. Para testar troca de versões e rollback, indique em `CAMPULSO_PREVIOUS_DIST` um diretório de build com a mesma origem e esquema de dados compatível e execute `node tests/migrate-public.mjs`. Para a suíte de acessibilidade, defina `CAMPULSO_AXE_PATH` com o caminho do `axe.min.js` disponível separadamente e execute `node tests/accessibility-browser.mjs`.
 
-O diretório de envio é exclusivamente `dist/`. Conserve as ferramentas npm, os testes, o SBOM e os relatórios de verificação junto da documentação da versão. A instalação da PWA requer contexto seguro, permissões e suporte do navegador.
+A edição base fica em `dist/`. Para a produção, envie a edição de descoberta validada em `dist-descoberta/`. Conserve as ferramentas npm, os testes, o SBOM e os relatórios de verificação junto da documentação da versão. A instalação da PWA requer contexto seguro, permissões e suporte do navegador.
 
 [Manifesto do build](docs/SHA256SUMS_DISTRIBUICAO.txt) · [SBOM CycloneDX 1.6](docs/SBOM.cdx.json) · [Direitos e avisos](docs/LICENCAS_DISTRIBUICAO.md).
 
@@ -31,7 +31,7 @@ Nesta candidata, a versão da política é 1.1. Para comparar builds, conserve a
 
 ## Distribuição com páginas públicas e SEO
 
-Para gerar a edição de descoberta, comece com os 17 arquivos do build acima. O script verifica essa base, inclui as páginas Sobre e Privacidade, os metadados da PWA, a folha de estilo, o sitemap e as regras dos indexadores. Depois regenera os workers. O diretório de saída deve ser novo. Na raiz da árvore, execute:
+Para gerar a edição de descoberta, comece com os 18 arquivos do build acima. O script verifica essa base, inclui as páginas Sobre e Privacidade, os metadados da PWA, a folha de estilo, o sitemap e as regras dos indexadores. Depois regenera os workers. O diretório de saída deve ser novo. Na raiz da árvore, execute:
 
 ```sh
 node scripts/preparar-seo.mjs . dist dist-descoberta
@@ -54,4 +54,8 @@ try {
 }
 ```
 
-O verificador compara todos os caminhos e bytes dos 22 arquivos com o [manifesto da edição de descoberta](docs/SHA256SUMS_DESCOBERTA.txt). O [SBOM dessa edição](docs/SBOM_DESCOBERTA.cdx.json) identifica seus arquivos e componentes. Os testes de referência de Vite e do bundle são específicos de `dist/` e continuam usando o manifesto da base.
+O verificador compara todos os caminhos e bytes dos 23 arquivos com o [manifesto da edição de descoberta](docs/SHA256SUMS_DESCOBERTA.txt). O [SBOM dessa edição](docs/SBOM_DESCOBERTA.cdx.json) identifica seus arquivos e componentes. Os testes de referência de Vite e do bundle são específicos de `dist/` e continuam usando o manifesto da base.
+
+Para conferir a edição de produção no emulador, inicie `wrangler pages dev dist-descoberta --ip 127.0.0.1 --port 19473`. Execute `node tests/pages-release.mjs dist-descoberta 19473 proof/http.json` e `node tests/discovery-browser.mjs dist-descoberta http://127.0.0.1:19473 proof/descoberta.json`. As provas verificam status, cabeçalhos, bytes, metadados, privacidade, acessibilidade básica e navegação offline.
+
+Para testar as duas edições com dados, aponte `CAMPULSO_PREVIOUS_DIST` para o pacote de descoberta preservado da 0.2.1 e `CAMPULSO_TEST_DIST` para o de 1.0.0. Execute `node tests/migrate-public.mjs` e `node tests/install-public.mjs`. A migração valida o conteúdo das onze coleções e restaura arquivos exportados pelas duas versões em perfis vazios.

@@ -1,4 +1,4 @@
-# Licenças e componentes da candidata 0.2.1
+# Licenças e componentes da versão 1.0.0
 
 O arquivo LICENSE contém a Apache License 2.0 para o código próprio. O aviso entregue na raiz do site reproduz os termos aplicáveis aos componentes de terceiros, o NOTICE original do Dexie, a licença e os copyrights das fontes, além dos limites de utilização da identidade visual. As referências históricas de ferramentas no lockfile descrevem o ambiente de compilação e testes.
 
@@ -20,6 +20,6 @@ A autorização R10 cobre os três derivados presentes no build. O favicon e o m
 
 O lockfile referencia 150 pacotes, inclusive opcionais de outras plataformas. O build exclui as ferramentas de desenvolvimento. Isso inclui `stackback@0.0.2`, cuja atribuição MIT própria segue sem comprovação. O texto BSD-3-Clause de parte de seu código e a declaração de licença no manifesto foram identificados na auditoria de origem. Uma distribuição futura dessa ferramenta exigirá conferência específica.
 
-[Licença do código](../LICENSE) · [Avisos integrais](../public/THIRD_PARTY_NOTICES.txt) · [SBOM dos 17 arquivos e 10 componentes](SBOM.cdx.json) · [Referência de formato CycloneDX](https://cyclonedx.org/docs/1.6/json/).
+[Licença do código](../LICENSE) · [Avisos integrais](../public/THIRD_PARTY_NOTICES.txt) · [SBOM dos 18 arquivos e 10 componentes](SBOM.cdx.json) · [Referência de formato CycloneDX](https://cyclonedx.org/docs/1.6/json/).
 
-A edição de descoberta mantém os mesmos dez componentes de software, fontes e direitos da marca. Seus 22 arquivos incluem duas páginas institucionais, uma folha de estilo, robots.txt e sitemap.xml. Os arquivos novos são do projeto. Os ícones de compartilhamento reutilizam os derivados autorizados. [SBOM da edição de descoberta](SBOM_DESCOBERTA.cdx.json) · [SHA-256 dos arquivos servidos](SHA256SUMS_DESCOBERTA.txt)
+A edição de descoberta mantém os mesmos dez componentes de software, fontes e direitos da marca. Seus 23 arquivos incluem duas páginas institucionais, uma folha de estilo, robots.txt e sitemap.xml. Os arquivos novos são do projeto. Os ícones de compartilhamento reutilizam os derivados autorizados. [SBOM da edição de descoberta](SBOM_DESCOBERTA.cdx.json) · [SHA-256 dos arquivos servidos](SHA256SUMS_DESCOBERTA.txt)

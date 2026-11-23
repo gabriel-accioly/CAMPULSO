@@ -39,6 +39,9 @@
 /THIRD_PARTY_NOTICES.txt
   Cache-Control: public, no-cache, must-revalidate
 
+/NOTICE
+  Cache-Control: public, no-cache, must-revalidate
+
 /LICENSE
   Cache-Control: public, no-cache, must-revalidate
 

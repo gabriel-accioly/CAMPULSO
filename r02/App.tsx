@@ -1524,7 +1524,7 @@ export function R02App({ initialData, scenario, db }: Props) {
               <p className="micro-note">
                 A instalação como aplicativo é opcional. O modo offline fica
                 disponível depois do primeiro carregamento completo da versão de
-                distribuição.
+                distribuição. CAMPULSO {APP_VERSION}.
               </p>
             </section>
           </div>

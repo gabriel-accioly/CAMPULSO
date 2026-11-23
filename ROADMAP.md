@@ -1,8 +1,8 @@
 # Evolução do CAMPULSO
 
-## Lançamento da 0.2.1
+## Lançamento 1.0.0
 
-A versão em produção inclui organização acadêmica, planejamento adaptativo, Modo leve, backup e restauração no dispositivo. Cada atualização requer conferência do build e do plano de recuperação. [Aplicativo em produção](https://campulso.pages.dev/)
+A versão 1.0.0 inclui organização acadêmica, planejamento adaptativo, Modo leve, backup e restauração no dispositivo. Cada atualização requer conferência do build e do plano de recuperação. [Aplicativo em produção](https://campulso.pages.dev/)
 
 ## Etapa 9 · Aprendizagem e inclusão
 

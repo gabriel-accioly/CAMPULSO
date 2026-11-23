@@ -19,7 +19,7 @@ try {
   for (const file of files.filter(f => f.isFile())) {
     const name = path.relative(directory, path.join(file.parentPath, file.name)).split(path.sep).join('/');
     if (['_headers', '404.html'].includes(name)) continue;
-    const row = await observe(name === 'index.html' ? '/' : '/' + name);
+    const row = await observe(name.endsWith('index.html') ? '/' + name.slice(0,-10) : '/' + name);
     assert.equal(row.status, 200, name);
     assert.equal(row.sha256, sha(await readFile(path.join(directory, name))), name);
     assert.equal(row.headers['x-content-type-options'], 'nosniff');

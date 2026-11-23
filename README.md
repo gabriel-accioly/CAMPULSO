@@ -6,11 +6,11 @@ Organize disciplinas, tarefas, compromissos e prazos. Informe os horários dispo
 
 ## Começar
 
-Use a versão 0.2.1 no navegador. [Abrir o CAMPULSO](https://campulso.pages.dev/)
+Acesse o aplicativo no navegador. [Abrir o CAMPULSO](https://campulso.pages.dev/)
 
 No cenário **Ensaio local**, o CAMPULSO guarda as alterações neste navegador. A instalação da PWA é opcional. Abra o aplicativo online pelo menos uma vez e aguarde o preparo para uso offline. Em **Dados**, exporte uma cópia JSON para levar seus registros a outro dispositivo. Preserve o arquivo em local privado. Trocar de navegador ou de domínio cria outro espaço de dados.
 
-Esta árvore contém os fontes da aplicação, as instruções de compilação e os manifestos que permitem conferir os arquivos da versão 0.2.1.
+Esta árvore contém os fontes da aplicação, as instruções de compilação e os manifestos que permitem conferir os arquivos da versão 1.0.0.
 
 ## Executar a partir dos fontes
 
@@ -24,13 +24,15 @@ npm run build
 npm run preview
 ```
 
-Abra a raiz do endereço de loopback informado pelo Vite. A raiz e `/?scenario=local` usam o mesmo espaço persistente nesta origem. Os cenários de demonstração podem conter exemplos voláteis. O diretório `dist/` contém o site compilado. A publicação deve usar a raiz de uma origem HTTPS dedicada. As instruções de produção acompanham a preparação de release.
+Abra a raiz do endereço de loopback informado pelo Vite. A raiz e `/?scenario=local` usam o mesmo espaço persistente nesta origem. Os cenários de demonstração podem conter exemplos voláteis. O diretório `dist/` contém o build base. O pacote para a origem pública, com Sobre, Privacidade e sitemap, fica em `dist-descoberta/`. A publicação deve usar a raiz de uma origem HTTPS dedicada. As instruções de produção acompanham a preparação de release.
 
 ## Documentação
 
+- [Notas da versão 1.0.0](CHANGELOG.md)
 - [Build reproduzível, versões das ferramentas e preparo das páginas públicas de descoberta](BUILD.md)
 - [Arquitetura e instalação](docs/ARQUITETURA.md)
 - [Inventário de licenças e SBOM](docs/LICENCAS_DISTRIBUICAO.md)
+- [Resultados dos ensaios do release](docs/TESTES_1.0.0.md)
 - [Testes e acessibilidade](docs/ACESSIBILIDADE.md)
 - [Política de Privacidade 1.1 e contato para exercer direitos](PRIVACY.md). No aplicativo, abra “Política de Privacidade” pelo rodapé ou pelo aviso de Dados. O endereço direto na mesma origem é `/#privacy`.
 - [Como contribuir](CONTRIBUTING.md), [governança](GOVERNANCE.md), [roadmap](ROADMAP.md), [convivência](CODE_OF_CONDUCT.md) e [segurança](SECURITY.md)
