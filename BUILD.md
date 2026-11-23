@@ -28,3 +28,30 @@ O diretório de envio é exclusivamente `dist/`. Conserve as ferramentas npm, os
 Para conferir a política incorporada, defina `CAMPULSO_AXE_PATH` com o caminho de `axe.min.js` (4.11.1) e execute `node tests/privacy-browser.mjs`. A prova compara o texto com `PRIVACY.md`, confere os destinos dos links, verifica foco, árvore acessível e larguras de 320, 390 e 1440 px. Ao final ela desliga o servidor local e recarrega a política com o navegador offline.
 
 Nesta candidata, a versão da política é 1.1. Para comparar builds, conserve a primeira pasta `dist/` em um diretório separado. Compile novamente e execute `node scripts/conferir-distribuicao.mjs` para cada diretório. O manifesto pós-build fixa também o conteúdo do Service Worker e a entrada que carrega o JavaScript. Compare a política exibida na recarga offline antes de aceitar uma atualização.
+
+## Distribuição com páginas públicas e SEO
+
+Para gerar a edição de descoberta, comece com os 17 arquivos do build acima. O script verifica essa base, inclui as páginas Sobre e Privacidade, os metadados da PWA, a folha de estilo, o sitemap e as regras dos indexadores. Depois regenera os workers. O diretório de saída deve ser novo. Na raiz da árvore, execute:
+
+```sh
+node scripts/preparar-seo.mjs . dist dist-descoberta
+```
+
+O código aponta para a origem oficial do CAMPULSO. A opção de verificação do Google é específica da propriedade do responsável. Para reproduzir a edição oficial com a metatag pública de verificação, em PowerShell 7 use os comandos abaixo **antes** de gerar a saída. Leia a página correspondente à revisão que deseja reproduzir. Sem o valor da metatag, o script gera a edição sem verificação do Google e o HTML e os dois workers têm hashes próprios.
+
+```powershell
+$htmlOficial = (Invoke-WebRequest 'https://campulso.pages.dev/').Content
+$meta = [regex]::Match($htmlOficial, '<meta name="google-site-verification" content="([\w-]+)">')
+if (!$meta.Success) { throw 'Metatag ausente nessa versão da origem.' }
+$env:CAMPULSO_GOOGLE_VERIFICATION = $meta.Groups[1].Value
+try {
+    node scripts/preparar-seo.mjs . dist dist-descoberta
+    if ($LASTEXITCODE -ne 0) { throw 'Falha na preparação da edição.' }
+    node scripts/conferir-distribuicao.mjs dist-descoberta descoberta
+    if ($LASTEXITCODE -ne 0) { throw 'A distribuição diverge da referência.' }
+} finally {
+    Remove-Item Env:CAMPULSO_GOOGLE_VERIFICATION -ErrorAction SilentlyContinue
+}
+```
+
+O verificador compara todos os caminhos e bytes dos 22 arquivos com o [manifesto da edição de descoberta](docs/SHA256SUMS_DESCOBERTA.txt). O [SBOM dessa edição](docs/SBOM_DESCOBERTA.cdx.json) identifica seus arquivos e componentes. Os testes de referência de Vite e do bundle são específicos de `dist/` e continuam usando o manifesto da base.

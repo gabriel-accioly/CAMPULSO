@@ -54,6 +54,7 @@ credentials.json
 id_rsa
 id_ed25519
 dist/
+dist-descoberta/
 dist-technical/
 proof/
 .wrangler/

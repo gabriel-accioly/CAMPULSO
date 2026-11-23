@@ -6,7 +6,10 @@ import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = path.resolve(process.argv[2] || path.join(root, 'dist'));
-const manifest = await readFile(path.join(root, 'docs', 'SHA256SUMS_DISTRIBUICAO.txt'), 'utf8');
+const profile = process.argv[3] || 'base';
+assert.ok(['base', 'descoberta'].includes(profile), 'Perfil esperado: base ou descoberta');
+const manifestName = profile === 'descoberta' ? 'SHA256SUMS_DESCOBERTA.txt' : 'SHA256SUMS_DISTRIBUICAO.txt';
+const manifest = await readFile(path.join(root, 'docs', manifestName), 'utf8');
 const expected = new Map();
 for (const line of manifest.trimEnd().split(/\r?\n/)) {
   const match = /^([0-9a-f]{64})  (.+)$/.exec(line);

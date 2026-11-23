@@ -2,7 +2,7 @@
 
 ## Lançamento da 0.2.1
 
-O escopo inicial inclui organização acadêmica, planejamento adaptativo, Modo leve, backup e restauração no dispositivo. A manutenção deve conferir o build, o plano de recuperação e as condições da origem HTTPS antes de solicitar a decisão de abertura ao responsável.
+A versão em produção inclui organização acadêmica, planejamento adaptativo, Modo leve, backup e restauração no dispositivo. Cada atualização requer conferência do build e do plano de recuperação. [Aplicativo em produção](https://campulso.pages.dev/)
 
 ## Etapa 9 · Aprendizagem e inclusão
 

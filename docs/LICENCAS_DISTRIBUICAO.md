@@ -21,3 +21,5 @@ A autorização R10 cobre os três derivados presentes no build. O favicon e o m
 O lockfile referencia 150 pacotes, inclusive opcionais de outras plataformas. O build exclui as ferramentas de desenvolvimento. Isso inclui `stackback@0.0.2`, cuja atribuição MIT própria segue sem comprovação. O texto BSD-3-Clause de parte de seu código e a declaração de licença no manifesto foram identificados na auditoria de origem. Uma distribuição futura dessa ferramenta exigirá conferência específica.
 
 [Licença do código](../LICENSE) · [Avisos integrais](../public/THIRD_PARTY_NOTICES.txt) · [SBOM dos 17 arquivos e 10 componentes](SBOM.cdx.json) · [Referência de formato CycloneDX](https://cyclonedx.org/docs/1.6/json/).
+
+A edição de descoberta mantém os mesmos dez componentes de software, fontes e direitos da marca. Seus 22 arquivos incluem duas páginas institucionais, uma folha de estilo, robots.txt e sitemap.xml. Os arquivos novos são do projeto. Os ícones de compartilhamento reutilizam os derivados autorizados. [SBOM da edição de descoberta](SBOM_DESCOBERTA.cdx.json) · [SHA-256 dos arquivos servidos](SHA256SUMS_DESCOBERTA.txt)

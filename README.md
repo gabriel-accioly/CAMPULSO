@@ -6,9 +6,11 @@ Organize disciplinas, tarefas, compromissos e prazos. Informe os horários dispo
 
 ## Começar
 
+Use a versão 0.2.1 no navegador. [Abrir o CAMPULSO](https://campulso.pages.dev/)
+
 No cenário **Ensaio local**, o CAMPULSO guarda as alterações neste navegador. A instalação da PWA é opcional. Abra o aplicativo online pelo menos uma vez e aguarde o preparo para uso offline. Em **Dados**, exporte uma cópia JSON para levar seus registros a outro dispositivo. Preserve o arquivo em local privado. Trocar de navegador ou de domínio cria outro espaço de dados.
 
-A versão preparada é a 0.2.1. Esta árvore reúne o código para revisão antes da primeira publicação. O repositório histórico de desenvolvimento permanece privado para proteger os arquivos de produção da marca.
+Esta árvore contém os fontes da aplicação, as instruções de compilação e os manifestos que permitem conferir os arquivos da versão 0.2.1.
 
 ## Executar a partir dos fontes
 
@@ -26,7 +28,7 @@ Abra a raiz do endereço de loopback informado pelo Vite. A raiz e `/?scenario=l
 
 ## Documentação
 
-- [Build reproduzível e versões das ferramentas](BUILD.md)
+- [Build reproduzível, versões das ferramentas e preparo das páginas públicas de descoberta](BUILD.md)
 - [Arquitetura e instalação](docs/ARQUITETURA.md)
 - [Inventário de licenças e SBOM](docs/LICENCAS_DISTRIBUICAO.md)
 - [Testes e acessibilidade](docs/ACESSIBILIDADE.md)
