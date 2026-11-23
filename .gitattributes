@@ -1,0 +1,6 @@
+# Não converter finais de linha ao fazer checkout: o manifesto cobre os bytes entregues.
+* -text
+*.png binary
+*.otf binary
+*.ttf binary
+*.ico binary

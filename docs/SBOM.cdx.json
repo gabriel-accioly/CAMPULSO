@@ -1,0 +1,486 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 3,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "bom-ref": "campulso",
+      "name": "CAMPULSO web",
+      "version": "0.2.1",
+      "description": "FINAL_COMPLETION_001. Apache-2.0 para o código próprio. Política de Privacidade 1.1."
+    },
+    "lifecycles": [
+      {
+        "phase": "post-build"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "lib:dexie",
+      "name": "dexie",
+      "description": "Módulo do grafo Rollup",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "version": "4.4.7",
+      "purl": "pkg:npm/dexie@4.4.7"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:react",
+      "name": "react",
+      "description": "Módulo do grafo Rollup",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "version": "19.3.1",
+      "purl": "pkg:npm/react@19.3.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:react-dom",
+      "name": "react-dom",
+      "description": "Módulo do grafo Rollup",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "version": "19.3.1",
+      "purl": "pkg:npm/react-dom@19.3.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:scheduler",
+      "name": "scheduler",
+      "description": "Módulo do grafo Rollup",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "version": "0.28.0",
+      "purl": "pkg:npm/scheduler@0.28.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:vite",
+      "name": "vite",
+      "description": "Polyfill modulepreload",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "version": "6.4.6",
+      "purl": "pkg:npm/vite@6.4.6"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:@rollup/plugin-commonjs",
+      "name": "@rollup/plugin-commonjs",
+      "description": "Auxiliares de interoperabilidade CommonJS; revisão indeterminada.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:tslib",
+      "name": "tslib",
+      "description": "Auxiliares incorporados pelo Dexie",
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD"
+          }
+        }
+      ],
+      "version": "2.8.1",
+      "purl": "pkg:npm/tslib@2.8.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:safari-14-idb-fix",
+      "name": "safari-14-idb-fix",
+      "description": "Código incorporado pelo Dexie",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "version": "3.0.0",
+      "purl": "pkg:npm/safari-14-idb-fix@3.0.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:promise-polyfill",
+      "name": "promise-polyfill",
+      "description": "Fragmentos de promise-light incorporados pelo Dexie; revisão indeterminada.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "lib:inter",
+      "name": "inter",
+      "description": "Quatro arquivos OpenType",
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ],
+      "version": "4.001"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:404.html",
+      "name": "404.html",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "543a7f2c614e6f57e986bdf1aae371c04607076cfd48f09167ce008a366749c4"
+        }
+      ],
+      "description": "Página de erro"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:LICENSE",
+      "name": "LICENSE",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f2b6deca4c7101308a9d745557abb97d540c139fe59484f6c705b58aa72da068"
+        }
+      ],
+      "description": "Licença Apache 2.0"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:THIRD_PARTY_NOTICES.txt",
+      "name": "THIRD_PARTY_NOTICES.txt",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3263652b13b8997fa9ecb26b0039811594695f8c21a9a6be618bf97c1096b703"
+        }
+      ],
+      "description": "Avisos e condições"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:_headers",
+      "name": "_headers",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "57e8fc7457b38367680824a1c719624a01ae5448a781c55193a669874be81155"
+        }
+      ],
+      "description": "Configuração do host"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/Inter-Bold-BMUSwCc_.otf",
+      "name": "assets/Inter-Bold-BMUSwCc_.otf",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9fc6261e817d0b1b2bf1953d8799bb1c837d11aeebbf83ae352e7b4d6de6425d"
+        }
+      ],
+      "description": "Fonte Inter",
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/Inter-Medium-DRfMpRcT.otf",
+      "name": "assets/Inter-Medium-DRfMpRcT.otf",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763"
+        }
+      ],
+      "description": "Fonte Inter",
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/Inter-Regular-7fSjz3xL.otf",
+      "name": "assets/Inter-Regular-7fSjz3xL.otf",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d4f2b9e148059a15f014cb0f0b8fea8cd11bfa447dd483bedf1b0adc0e2ba799"
+        }
+      ],
+      "description": "Fonte Inter",
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/Inter-SemiBold-CpcUY_gG.otf",
+      "name": "assets/Inter-SemiBold-CpcUY_gG.otf",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0a4d30778fa2dc239368d90fd854b88b27e7ede737450da72686a90eca66f02c"
+        }
+      ],
+      "description": "Fonte Inter",
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/Logo_compacto_sem_slogan-CT-L4rnd.svg",
+      "name": "assets/Logo_compacto_sem_slogan-CT-L4rnd.svg",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d0a18c9aae3782a1506ca1c26a4e756375cf44c8c4baeb13feb00c33e29c7bfa"
+        }
+      ],
+      "description": "Identidade R10",
+      "licenses": [
+        {
+          "license": {
+            "name": "Autorização R10 restrita ao aplicativo/site CAMPULSO"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/index-Dk0sRDxM.js",
+      "name": "assets/index-Dk0sRDxM.js",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f1f385574c19651c5fd73a9deee1393de0db64489b995750996a4992f00fa53d"
+        }
+      ],
+      "description": "Bundle de JavaScript ou CSS"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:assets/index-C7JHZQxM.css",
+      "name": "assets/index-C7JHZQxM.css",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6db90f14d86dec760479442f829553f9481b5dc6555a3bc06c3291253e723c69"
+        }
+      ],
+      "description": "Bundle de JavaScript ou CSS"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:index.html",
+      "name": "index.html",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "61c7ee4f8794b5795c1332400ffb340658cf72d7594560f36ae2e0a2e001c109"
+        }
+      ],
+      "description": "Entrada"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:manifest.webmanifest",
+      "name": "manifest.webmanifest",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "60642646bb62b6aa1f3ea14ff35e805ea9b1ec3b550ac8d469b01ea41ed49d89"
+        }
+      ],
+      "description": "Instalação PWA"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:r02/icons/icone-192.png",
+      "name": "r02/icons/icone-192.png",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "91a2fcdb7d93688e628b365f56aa3d1219165320f88f6fa99b4e8727cdaecb9d"
+        }
+      ],
+      "description": "Identidade R10",
+      "licenses": [
+        {
+          "license": {
+            "name": "Autorização R10 restrita ao aplicativo/site CAMPULSO"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:r02/icons/icone-512.png",
+      "name": "r02/icons/icone-512.png",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "02738813268df34f6478ea3f6b2c25302343a6dda0a82d014218b02d0abec598"
+        }
+      ],
+      "description": "Identidade R10",
+      "licenses": [
+        {
+          "license": {
+            "name": "Autorização R10 restrita ao aplicativo/site CAMPULSO"
+          }
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:r02/sw.js",
+      "name": "r02/sw.js",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f2655ab5605bd6b3706e4bca527a2636d0eace709bee0e5658a0521f40da9dd2"
+        }
+      ],
+      "description": "Service worker"
+    },
+    {
+      "type": "file",
+      "bom-ref": "file:sw.js",
+      "name": "sw.js",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f2655ab5605bd6b3706e4bca527a2636d0eace709bee0e5658a0521f40da9dd2"
+        }
+      ],
+      "description": "Service worker"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "file:assets/Inter-Bold-BMUSwCc_.otf",
+      "dependsOn": [
+        "lib:inter"
+      ]
+    },
+    {
+      "ref": "file:assets/Inter-Medium-DRfMpRcT.otf",
+      "dependsOn": [
+        "lib:inter"
+      ]
+    },
+    {
+      "ref": "file:assets/Inter-Regular-7fSjz3xL.otf",
+      "dependsOn": [
+        "lib:inter"
+      ]
+    },
+    {
+      "ref": "file:assets/Inter-SemiBold-CpcUY_gG.otf",
+      "dependsOn": [
+        "lib:inter"
+      ]
+    },
+    {
+      "ref": "file:assets/index-Dk0sRDxM.js",
+      "dependsOn": [
+        "lib:dexie",
+        "lib:react",
+        "lib:react-dom",
+        "lib:scheduler",
+        "lib:vite",
+        "lib:@rollup/plugin-commonjs"
+      ]
+    },
+    {
+      "ref": "lib:dexie",
+      "dependsOn": [
+        "lib:tslib",
+        "lib:safari-14-idb-fix",
+        "lib:promise-polyfill"
+      ]
+    },
+    {
+      "ref": "campulso",
+      "dependsOn": [
+        "file:404.html",
+        "file:LICENSE",
+        "file:THIRD_PARTY_NOTICES.txt",
+        "file:_headers",
+        "file:assets/Inter-Bold-BMUSwCc_.otf",
+        "file:assets/Inter-Medium-DRfMpRcT.otf",
+        "file:assets/Inter-Regular-7fSjz3xL.otf",
+        "file:assets/Inter-SemiBold-CpcUY_gG.otf",
+        "file:assets/Logo_compacto_sem_slogan-CT-L4rnd.svg",
+        "file:assets/index-Dk0sRDxM.js",
+        "file:assets/index-C7JHZQxM.css",
+        "file:index.html",
+        "file:manifest.webmanifest",
+        "file:r02/icons/icone-192.png",
+        "file:r02/icons/icone-512.png",
+        "file:r02/sw.js",
+        "file:sw.js"
+      ]
+    }
+  ]
+}
